@@ -21,6 +21,9 @@ function App() {
           <Route path="/dashboard">
             <Dashboard/>
           </Route>
+          <Route path="/signIn">
+            <SignIn/>
+          </Route>
           <Route path="/newsDetails/:newsId">
             <NewsDetails/>
           </Route>

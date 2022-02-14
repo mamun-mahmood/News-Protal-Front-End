@@ -13,7 +13,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import { Link } from "react-router-dom";
-import { FormControl, MenuItem} from "@material-ui/core";
+import { FormControl, MenuItem } from "@material-ui/core";
 import { UserContext } from "../App";
 
 const drawerWidth = 240;
@@ -70,8 +70,8 @@ export default function PersistentDrawerLeft() {
     setOpen(false);
   };
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-const [selectedCatagory, setSelectedCatagory] = useState('all');
-setLoggedInUser(selectedCatagory);
+  const [selectedCatagory, setSelectedCatagory] = useState("all");
+  setLoggedInUser(selectedCatagory);
   return (
     <div className={classes.root} style={{ marginBottom: "80px" }}>
       <CssBaseline />
@@ -102,12 +102,14 @@ setLoggedInUser(selectedCatagory);
             </div>
           </Link>
           <div>
-            <IconButton>Login</IconButton>
+            <Link to="/signIn">
+              <IconButton>Login</IconButton>
+            </Link>
           </div>
         </Toolbar>
       </AppBar>
       <Drawer
-      style={{overflowY: 'scroll'}}
+        style={{ overflowY: "scroll" }}
         className={classes.drawer}
         variant="persistent"
         anchor="left"
@@ -129,42 +131,90 @@ setLoggedInUser(selectedCatagory);
         <Divider />
         <FormControl>
           <List
-            // labelId="demo-simple-select-label"
-            // id="demo-simple-select"
-            // // value={age}
-            // name="catagory"
-            // onClick={handleChange}
+          // labelId="demo-simple-select-label"
+          // id="demo-simple-select"
+          // // value={age}
+          // name="catagory"
+          // onClick={handleChange}
           >
-            <MenuItem onClick={ () => setSelectedCatagory('all')} >All</MenuItem>
-            <Divider/>
-            <MenuItem onClick={ () => setSelectedCatagory('Top News')} >TOP News</MenuItem>
-            <Divider/>
-            <MenuItem onClick={ () => setSelectedCatagory("Entertainment")} >Entertainment</MenuItem>
-            <MenuItem onClick={ () => setSelectedCatagory("Sports")} >Sports</MenuItem>
-            <MenuItem onClick={ () => setSelectedCatagory("Music")} >Music</MenuItem>
-            <MenuItem onClick={ () => setSelectedCatagory("International")} >International</MenuItem>
-            <MenuItem onClick={ () => setSelectedCatagory("Politics")} >Politics</MenuItem>
-            <MenuItem onClick={ () => setSelectedCatagory("Nature")} >Nature</MenuItem>
-            <MenuItem onClick={ () => setSelectedCatagory("Technology")} >Technology</MenuItem>
-            <MenuItem onClick={ () => setSelectedCatagory("Science")} >Science</MenuItem>
-            <MenuItem onClick={ () => setSelectedCatagory("Health")} >Health</MenuItem>
-            <MenuItem onClick={ () => setSelectedCatagory("Religion")} >Religion</MenuItem>
-            <MenuItem onClick={ () => setSelectedCatagory("Social")} >Social</MenuItem>
-            <MenuItem onClick={ () => setSelectedCatagory('all')} >All</MenuItem>
-            <Divider/>
-            <MenuItem onClick={ () => setSelectedCatagory('Top News')} >TOP News</MenuItem>
-            <Divider/>
-            <MenuItem onClick={ () => setSelectedCatagory("Entertainment")} >Entertainment</MenuItem>
-            <MenuItem onClick={ () => setSelectedCatagory("Sports")} >Sports</MenuItem>
-            <MenuItem onClick={ () => setSelectedCatagory("Music")} >Music</MenuItem>
-            <MenuItem onClick={ () => setSelectedCatagory("International")} >International</MenuItem>
-            <MenuItem onClick={ () => setSelectedCatagory("Politics")} >Politics</MenuItem>
-            <MenuItem onClick={ () => setSelectedCatagory("Nature")} >Nature</MenuItem>
-            <MenuItem onClick={ () => setSelectedCatagory("Technology")} >Technology</MenuItem>
-            <MenuItem onClick={ () => setSelectedCatagory("Science")} >Science</MenuItem>
-            <MenuItem onClick={ () => setSelectedCatagory("Health")} >Health</MenuItem>
-            <MenuItem onClick={ () => setSelectedCatagory("Religion")} >Religion</MenuItem>
-            <MenuItem onClick={ () => setSelectedCatagory("Social")} >Social</MenuItem>
+            <MenuItem onClick={() => setSelectedCatagory("all")}>All</MenuItem>
+            <Divider />
+            <MenuItem onClick={() => setSelectedCatagory("Top News")}>
+              TOP News
+            </MenuItem>
+            <Divider />
+            <MenuItem onClick={() => setSelectedCatagory("Entertainment")}>
+              Entertainment
+            </MenuItem>
+            <MenuItem onClick={() => setSelectedCatagory("Sports")}>
+              Sports
+            </MenuItem>
+            <MenuItem onClick={() => setSelectedCatagory("Music")}>
+              Music
+            </MenuItem>
+            <MenuItem onClick={() => setSelectedCatagory("International")}>
+              International
+            </MenuItem>
+            <MenuItem onClick={() => setSelectedCatagory("Politics")}>
+              Politics
+            </MenuItem>
+            <MenuItem onClick={() => setSelectedCatagory("Nature")}>
+              Nature
+            </MenuItem>
+            <MenuItem onClick={() => setSelectedCatagory("Technology")}>
+              Technology
+            </MenuItem>
+            <MenuItem onClick={() => setSelectedCatagory("Science")}>
+              Science
+            </MenuItem>
+            <MenuItem onClick={() => setSelectedCatagory("Health")}>
+              Health
+            </MenuItem>
+            <MenuItem onClick={() => setSelectedCatagory("Religion")}>
+              Religion
+            </MenuItem>
+            <MenuItem onClick={() => setSelectedCatagory("Social")}>
+              Social
+            </MenuItem>
+            <MenuItem onClick={() => setSelectedCatagory("all")}>All</MenuItem>
+            <Divider />
+            <MenuItem onClick={() => setSelectedCatagory("Top News")}>
+              TOP News
+            </MenuItem>
+            <Divider />
+            <MenuItem onClick={() => setSelectedCatagory("Entertainment")}>
+              Entertainment
+            </MenuItem>
+            <MenuItem onClick={() => setSelectedCatagory("Sports")}>
+              Sports
+            </MenuItem>
+            <MenuItem onClick={() => setSelectedCatagory("Music")}>
+              Music
+            </MenuItem>
+            <MenuItem onClick={() => setSelectedCatagory("International")}>
+              International
+            </MenuItem>
+            <MenuItem onClick={() => setSelectedCatagory("Politics")}>
+              Politics
+            </MenuItem>
+            <MenuItem onClick={() => setSelectedCatagory("Nature")}>
+              Nature
+            </MenuItem>
+            <MenuItem onClick={() => setSelectedCatagory("Technology")}>
+              Technology
+            </MenuItem>
+            <MenuItem onClick={() => setSelectedCatagory("Science")}>
+              Science
+            </MenuItem>
+            <MenuItem onClick={() => setSelectedCatagory("Health")}>
+              Health
+            </MenuItem>
+            <MenuItem onClick={() => setSelectedCatagory("Religion")}>
+              Religion
+            </MenuItem>
+            <MenuItem onClick={() => setSelectedCatagory("Social")}>
+              Social
+            </MenuItem>
           </List>
         </FormControl>
         <Divider />
